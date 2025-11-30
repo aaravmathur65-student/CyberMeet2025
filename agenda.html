@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ===================== META & PAGE SETTINGS ===================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule</title>
+
+    <!-- ===================== EXTERNAL STYLES ===================== -->
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+
+    <!-- ===================== PAGE-SPECIFIC STYLES ===================== -->
+    <style>
+      /* ===================== SCHEDULE LAYOUT ===================== */
+      #schedule {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 40px;
+        width: 100%;
+        padding-top: 20px;
+      }
+
+      /* ===================== BACKGROUND IMAGE ===================== */
+      #bg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        filter: brightness(1.1) contrast(0.95);
+      }
+
+      /* ===================== TABLE CONTAINER ===================== */
+      #table-container {
+        width: 95%;
+        max-width: 900px;
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: 2px blue solid;
+        background: radial-gradient(circle, #e0f0ff, #bcd7ff);
+      }
+
+      /* ===================== TABLE STYLES ===================== */
+      table {
+        font-size: 1rem;
+        border-top: 2px blue solid;
+        margin-top: 25px;
+        border-collapse: collapse;
+        word-wrap: break-word;
+        width: 100%;
+      }
+
+      thead {
+        font-size: 1.4rem;
+      }
+
+      th {
+        padding-top: 25px;
+        padding-bottom: 10px;
+      }
+
+      td {
+        line-height: 50px;
+        text-align: center;
+      }
+
+      table tr td:nth-child(1) {
+        opacity: 0.5;
+      }
+
+      /* Agenda item column alignment */
+      table tr td:nth-child(2) {
+        text-align: left;
+        padding-left: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===================== BACKGROUND IMAGE ===================== -->
+    <img id="bg" src="agenda.jpg" alt="background" />
+
+    <!-- ===================== HEADER SECTION ===================== -->
+    <div id="header-container"></div>
+
+    <!-- ===================== SCHEDULE CONTENT ===================== -->
+    <div id="schedule">
+      <div id="table-container">
+        <span><h1>CyberMeet 2025 Agenda</h1></span>
+        <span><p>Thursday, December 25 2025</p></span>
+
+        <!-- ===================== AGENDA TABLE ===================== -->
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th style="text-align: start; padding-left: 25px">Agenda Item</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>9:00AM - 9:30AM</td>
+              <td>Registration & Secure Badge Pickup</td>
+            </tr>
+            <tr>
+              <td>9:30AM - 9:45AM</td>
+              <td>Opening: The State of Cyber Warfare 2025</td>
+            </tr>
+            <tr>
+              <td>9:45AM - 10:15AM</td>
+              <td>Security Architecture</td>
+            </tr>
+            <tr>
+              <td>10:15AM - 11:15AM</td>
+              <td>AI-Driven Threat Detection & Mitigation</td>
+            </tr>
+            <tr>
+              <td>11:15AM - 12:15PM</td>
+              <td>Live Demo: Ethical Hacking & Penetration Testing</td>
+            </tr>
+            <tr>
+              <td>12:15PM - 1:30PM</td>
+              <td>Lunch & Networking</td>
+            </tr>
+            <tr>
+              <td>1:30PM - 3:30PM</td>
+              <td>Workshop: Ransomware Incident Response Simulation</td>
+            </tr>
+            <tr>
+              <td>3:30PM - 4:00PM</td>
+              <td>Coffee Break</td>
+            </tr>
+            <tr>
+              <td>4:00PM - 5:00PM</td>
+              <td>Panel: Data Privacy in the Age of Surveillance</td>
+            </tr>
+            <tr>
+              <td>5:00PM - 6:00PM</td>
+              <td>Networking Mixer & Awards Ceremony</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ===================== HEADER SCRIPT ===================== -->
+    <script src="header.js"></script>
+  </body>
+</html>

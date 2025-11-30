@@ -1,0 +1,174 @@
+/* ===================== BANNER ===================== */
+#banner {
+  width: 100%;
+  max-height: 400px;
+  display: block;
+  background-color: black;
+}
+
+.banner {
+  height: auto;
+  object-fit: contain;
+}
+
+/* ===================== INTRO SECTION ===================== */
+#intro {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  background-color: white;
+}
+
+#intro span {
+  flex: 1 1 300px;
+}
+
+#intro p {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+/* ===================== SLOGAN TEXT ===================== */
+#slogan {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 50px 0;
+  padding: 1px;
+  text-align: center;
+}
+
+/* ===================== EVENT IMAGE SECTION ===================== */
+#event_img {
+  background-color: rgb(110, 161, 255);
+  border: #333 solid;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#event_img h2 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 0%;
+}
+
+/* ===================== GALLERY HEADING WRAPPER ===================== */
+.heading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+/* ===================== IMAGE GRID ===================== */
+#images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+#images-container img {
+  width: 100%;
+  max-width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+/* ===================== REVIEW SECTION ===================== */
+#review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===================== REVIEW HEADING ===================== */
+#review-heading {
+  text-align: center;
+  border: #333 solid;
+  background-color: rgb(164, 142, 243);
+  margin-top: 1em;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+#review-heading span:nth-of-type(1) {
+  padding: 50px;
+  padding-right: 1px;
+  color: #ccc;
+}
+
+#review-heading span:nth-of-type(2) {
+  color: #791313;
+  padding: 50px;
+  padding-left: 1px;
+}
+
+/* ===================== REVIEW CARDS ===================== */
+#reviews-container h3 {
+  text-align: center;
+}
+
+#reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 3em 1em 3em;
+  justify-content: center;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 20px;
+  line-height: 1.6;
+  padding: 1em;
+  border: 1px solid #8d8c8c;
+  border-radius: 10px;
+  background: #c7bcbc;
+  flex: 1 1 300px;
+  min-width: 300px;
+  text-align: center;
+}
+
+/* ===================== FOOTER ===================== */
+#footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+
+#footer_link {
+  text-decoration: underline;
+  color: rgb(93, 93, 235);
+}
+
+/* ===================== BACK TO TOP BUTTON ===================== */
+#top_button {
+  text-decoration: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px #e9e2e2 solid;
+  border-radius: 50%;
+  margin-top: 18.585px;
+  margin-left: 20px;
+  color: rgb(37, 33, 33);
+  background-color: rgb(147, 202, 202);
+}
