@@ -48,8 +48,6 @@
   padding: 25px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 #event_img h2 {
@@ -77,11 +75,9 @@
 }
 
 #images-container img {
-  width: clamp(280px, 25vw, 600px); /* responsive width */
-  height: 300px;
+  width: clamp(280px, 25vw, 600px);
   object-fit: cover;
   border-radius: 25px;
-  flex-shrink: 0; /* prevent shrinking below clamp minimum */
 }
 
 /* ===================== REVIEW SECTION ===================== */
