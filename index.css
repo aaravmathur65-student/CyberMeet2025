@@ -68,20 +68,20 @@
 }
 
 /* ===================== IMAGE GRID ===================== */
+
 #images-container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  width: 100%;
 }
 
 #images-container img {
-  width: 100%;
-  max-width: 350px;
-  height: 250px;
+  width: clamp(280px, 25vw, 600px); /* responsive width */
+  height: 300px;
   object-fit: cover;
   border-radius: 25px;
+  flex-shrink: 0; /* prevent shrinking below clamp minimum */
 }
 
 /* ===================== REVIEW SECTION ===================== */
@@ -137,7 +137,7 @@
   border-radius: 10px;
   background: #c7bcbc;
   flex: 1 1 300px;
-  min-width: 300px;
+  min-width: 280px;
   text-align: center;
 }
 
