@@ -117,30 +117,29 @@
 
     <!-- ===================== SCRIPTS ===================== -->
     <script src="header.js"></script>
-    <script>
-      /* ===================== DYNAMIC ATTENDEE ADDITION ===================== */
-      window.addEventListener("message", function (event) {
-        const d = event.data;
 
-        // Accept only valid attendee messages
-        if (!d || typeof d !== "object") return;
-        if (!d.name || !d.ticket) return;
+    <script>
+      window.onload = function () {
+        const data = JSON.parse(window.name);
+        console.log("Attendee page received:", data);
+
+        if (!data || !data.name || !data.ticket) return;
 
         const tbody = document.querySelector("table tbody");
 
         const newRow = document.createElement("tr");
 
         const nameCell = document.createElement("td");
-        nameCell.textContent = d.name;
+        nameCell.textContent = data.name;
 
         const ticketCell = document.createElement("td");
-        ticketCell.textContent = d.ticket;
+        ticketCell.textContent = data.ticket;
 
         newRow.appendChild(nameCell);
         newRow.appendChild(ticketCell);
 
         tbody.appendChild(newRow);
-      });
+      };
     </script>
   </body>
 </html>
