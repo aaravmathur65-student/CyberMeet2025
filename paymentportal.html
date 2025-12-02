@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ===================== META & TITLE ===================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Portal</title>
+
+    <!-- ===================== EXTERNAL STYLES ===================== -->
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ===================== INTERNAL STYLES ===================== -->
+    <style>
+      body {
+        background: linear-gradient(to bottom, #74c0e3, #0b1220);
+      }
+
+      /* ===================== PAGE LAYOUT ===================== */
+      #attendee-list-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      /* ===================== FORM CONTAINER ===================== */
+      #table-container {
+        width: 95%;
+        max-width: 900px;
+        padding: 20px 30px;
+        border: 2px solid #2a4d9b;
+        border-radius: 10px;
+        margin-top: 50px;
+        box-sizing: border-box;
+        background-color: #a8c6ff;
+      }
+
+      /* ===================== HEADINGS ===================== */
+      h1 {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      /* ===================== FORM INPUTS ===================== */
+      form label {
+        display: block;
+        margin: 12px 0 5px;
+        font-weight: 600;
+      }
+
+      form input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #928181;
+        font-size: 1rem;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+      }
+
+      /* ===================== SUBMIT BUTTON ===================== */
+      button {
+        width: 100%;
+        padding: 14px;
+        background-color: #2a4d9b;
+        color: white;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #345fbe;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header-container"></div>
+
+    <!-- ===================== PAYMENT FORM SECTION ===================== -->
+    <div id="attendee-list-container">
+      <div id="table-container">
+        <h1>Payment Portal</h1>
+
+        <form id="payment-form">
+          <label for="name">Cardholder Name</label>
+          <input type="text" id="name" placeholder="John Doe" required />
+
+          <label for="card-number">Card Number</label>
+          <input
+            type="text"
+            id="card-number"
+            maxlength="16"
+            placeholder="1234 5678 9012 3456"
+            required
+          />
+
+          <label for="expiry">Expiry Date</label>
+          <input type="text" id="expiry" placeholder="MM/YY" required />
+
+          <label for="cvv">CVV</label>
+          <input
+            type="password"
+            id="cvv"
+            maxlength="3"
+            placeholder="123"
+            required
+          />
+
+          <button type="submit">Complete Payment</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="header.js"></script>
+    <script>
+      let incomingData = JSON.parse(window.name);
+
+      console.log("Payment page received:", incomingData);
+
+      document
+        .getElementById("payment-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          console.log("Payment Completed");
+
+          // Pass data to attendee page
+          window.name = JSON.stringify(incomingData);
+
+          // Go to attendee page (same tab)
+          window.location.href = "attendee.html";
+        });
+    </script>
+  </body>
+</html>
