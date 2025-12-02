@@ -234,7 +234,6 @@
     <!-- ===================== SCRIPTS ===================== -->
     <script src="header.js"></script>
     <script>
-      /* ===================== FORM SUBMISSION HANDLING ===================== */
       const form = document.querySelector("form");
 
       form.addEventListener("submit", function (e) {
@@ -251,12 +250,11 @@
           ticket: document.getElementById("ticket").value,
         };
 
-        setTimeout(() => {
-          const newWindow = window.open("attendee.html");
-          newWindow.onload = () => {
-            newWindow.postMessage(data, "*");
-          };
-        }, 1300);
+        // Save data for payment page to read
+        window.name = JSON.stringify(data);
+
+        // Go to payment page in SAME TAB
+        window.location.href = "paymentportal.html";
 
         submission();
       });
